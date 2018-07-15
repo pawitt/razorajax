@@ -1,10 +1,8 @@
 ﻿@using RazorAjax.Models
-
-
+@model RazorAjax.Models.RazorAjaxViewModels
 
 @section css
 {
-    
     <style type="text/css">
         table {
             border: 5px solid red;
@@ -14,11 +12,8 @@
 }
 @section Scripts
 {
-
     <script src="~/Scripts/custom-form.js"></script>
 }
-
-@model RazorAjax.Models.RazorAjaxViewModels
 
 @{
     ViewBag.Title = "ASP.NET MVC5: Razor Ajax Form Comtrol";
@@ -46,8 +41,21 @@
                     <div class="col-md-12 col-md-push-2">
                         <div class="form-group">
                             <div class="col-md-10 col-md-pull-1">
-                                @Html.TextBoxFor(m => m.Text, new { placeholder = Html.DisplayNameFor(m => m.Text), @class = "form-control" })
-                                @Html.ValidationMessageFor(m => m.Text, "", new { @class = "text-danger custom-danger" })
+                                <div styele="margin-top:10px;">
+                                    @Html.TextBoxFor(m => m.Text, new { placeholder = Html.DisplayNameFor(m => m.Text), @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.Text, "", new { @class = "text-danger custom-danger" })
+                                </div>
+                                
+                                <div style="margin-top: 10px;">
+                                    @Html.TextBoxFor(m => m.Username, new { placeholder = Html.DisplayNameFor(m => m.Username), @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger custom-danger" })
+                                </div>
+                                
+                                <div  style="margin-top: 10px;">
+                                    @Html.TextBoxFor(m => m.Password, new { placeholder = Html.DisplayNameFor(m => m.Password), @class = "form-control", @type = "password" })
+                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger custom-danger" })
+                                </div>
+                                
                             </div>
                         </div>
                         <div class="form-group">

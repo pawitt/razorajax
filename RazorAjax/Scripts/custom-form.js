@@ -33,7 +33,7 @@ var onAjaxRequestSuccess = function (result) {
         alert(result.ErrorMsg);
     } else if (result.EnableSuccess) {
         // Setting.  
-        alert(result.SuccessMsg);
+        alert(result.SuccessMsg + " username=" + result.UsernameInput + " password=" + result.PasswordInput);
         // Resetting form.  
         $('#AjaxformId').get(0).reset();
     }

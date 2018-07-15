@@ -35,6 +35,7 @@ namespace RazorAjax.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Index(RazorAjaxViewModels model)
         {
+            var x = model;
             try
             {
                 // Verification  
@@ -45,7 +46,9 @@ namespace RazorAjax.Controllers
                     {
                         EnableSuccess = true,
                         SuccessTitle = "Success",
-                        SuccessMsg = model.Text
+                        SuccessMsg = model.Text,
+                        UsernameInput = model.Username,
+                        PasswordInput = model.Password
                     });
                 }
             }
