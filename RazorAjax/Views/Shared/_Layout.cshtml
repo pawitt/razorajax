@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    @RenderSection("css", false)
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -40,7 +40,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/bootstrap")    
-    @Scripts.Render("~/scripts/custom-form")
+
     @RenderSection("scripts", required: false)
 </body>
 </html>
