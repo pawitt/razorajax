@@ -11,6 +11,7 @@ namespace RazorAjax.Controllers
         public ActionResult Index()
         {
             return View();
+            // test comnmment
         }
 
         public ActionResult About()
