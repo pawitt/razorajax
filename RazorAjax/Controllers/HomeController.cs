@@ -12,6 +12,7 @@ namespace RazorAjax.Controllers
         {
             return View();
             // test comnmment
+            // test comment 2
         }
 
         public ActionResult About()
